@@ -1,0 +1,51 @@
+<div class="notepad position-relative">
+     <div class="paper">
+          <div class="" style="font-size: 20px;">
+               
+               Olá minha amada Camilly, venho por meio desta carta dizer que
+               gosto demais de vossa pessoa, para falar verdade ao meu ver eu
+               amo você e que estou esperando ansiosamente para gente conseguir
+               sair algum dia junto. <br /><br />
+               E queria dizer que fiquei muito feliz por você ter ido com o
+               brinco que eu dei à você, e eles simplesmente ficaram perfeitos
+               em você.
+               <br /><br />
+               Cartinha feita com amor e carinho,
+               <br />
+               Ass.: <strong>R</strong>.
+               <br />
+
+               <button
+                    onclick="spotifyred()"
+                    class="btn fs-3 bi bi-spotify w-100 text-center py-2"
+                    style="
+                         color: rgb(105, 170, 130);
+                         z-index: 10;
+                         position: absolute;
+                         left: -.1rem;
+                    "
+               >
+                    Aqui está um playlist que fiz pensando em você.
+               </button>
+          </div>
+     </div>
+     <section class="position-absolute start-50 top-50 translate-middle">
+          <img
+               style="opacity: 0.15"
+               src="./assets/img/emoji1.png"
+               width="400"
+          />
+     </section>
+     <section class="position-absolute start-50 top-0 translate-middle">
+          <i class="bi bi-heart-fill" style="color: rgb(255, 32, 80); font-size: 60px; transform: rotate(20deg);"></i>
+     </section>
+</div>
+
+<script>
+     var notepad = document.querySelector(".notepad");
+     notepad.classList.add("anim-paper");
+
+     notepad.addEventListener("animationend", () => {
+          notepad.classList.replace("anim-paper", "anim-idle");
+     });
+</script>

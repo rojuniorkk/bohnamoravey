@@ -1,0 +1,34 @@
+.notepad {
+     width: 500px;
+     max-width: 900px;
+     height: 550px;
+     /* overflow: hidden; */
+}
+
+.top {
+     width: 100%;
+     height: 50px;
+     background: #333;
+     border-radius: 5px 5px 0 0;
+}
+
+.paper {
+     width: 100%;
+     height: 550px;
+     padding: 35px 20px;
+     background: repeating-linear-gradient(
+          #f1ede9,
+          #f1ede9 31px,
+          #94acd4 31px,
+          #94acd4 32px
+     );
+     font-family: "Shadows Into Light", cursive;
+     line-height: 32px;
+     outline: 0;
+     font-size: 22px;
+}
+
+.anim-idle {
+     animation: float 6s ease-in-out infinite;
+}
+

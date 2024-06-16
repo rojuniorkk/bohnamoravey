@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+     <head>
+          <meta charset="UTF-8" />
+          <meta
+               name="viewport"
+               content="width=device-width, initial-scale=1.0"
+          />
+
+          <link rel="website icon" href="./assets/img/emoji3.png">
+          <title>C💗A💗M💗I💗L💗L💗Y💗</title>
+
+          <link rel="stylesheet" href="./assets/css/main.css" />
+          <link rel="stylesheet" href="./assets/css/paper.css" />
+
+          <!-- Boostrap -->
+
+          <link
+               rel="stylesheet"
+               href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          />
+
+          <link
+               href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+               rel="stylesheet"
+               integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+               crossorigin="anonymous"
+          />
+          <script
+               src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+               integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+               crossorigin="anonymous"
+          ></script>
+
+          <!-- Scripts -->
+          <script src="./assets/js/main-start.js"></script>
+     </head>
+     <body>
+          <header class="fixed-top"></header>
+
+          <main class="container" >
+               <section style="height: auto; width: 80vw" class="py-5">
+
+                    <section
+                         class="position-absolute top-50 start-50 translate-middle"
+                    >
+                         <!-- Carta -->
+                         <section id="carta-modal" class="float-anim">
+                              <section>
+                                   <figure>
+                                        <img
+                                             id="carta"
+                                             src="./assets/img/carta.png"
+                                             width="400"
+                                             alt=""
+                                        />
+                                        <figcaption
+                                             class="text-center fs-4 text-light cursive py-2"
+                                        >
+                                             Clique na Carta
+                                        </figcaption>
+                                   </figure>
+                              </section>
+
+                              <section class="position-absolute emojis">
+                                   <img
+                                        id="emoji1"
+                                        src="./assets/img/emoji1.png"
+                                   />
+                                   <img
+                                        id="emoji2"
+                                        src="./assets/img/emoji2.png"
+                                   />
+                              </section>
+                         </section>
+
+                         <section id="papel-modal"></section>
+                    </section>
+                    <section
+                         id="player-modal"
+                         class="position-absolute bottom-0 end-0 m-3"
+                    ></section>
+               </section>
+          </main>
+
+          <script
+               src="https://code.jquery.com/jquery-3.7.1.js"
+               integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+               crossorigin="anonymous"
+          ></script>
+
+          <script
+               src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+               integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+               crossorigin="anonymous"
+          ></script>
+          <script
+               src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+               integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+               crossorigin="anonymous"
+          ></script>
+
+          <script>
+               var Carta = document.getElementById("carta");
+               var CartaModal = document.getElementById("carta-modal");
+
+               Carta.addEventListener("click", () => {
+                    CartaModal.classList.replace("float-anim", "abrir-carta");
+
+                    CartaModal.addEventListener("animationend", () => {
+                         CartaModal.remove();
+                         $("header").load("./assets/inc/header.html");
+                         $("#papel-modal").load("./assets/inc/papel.html");
+                         $("#player-modal").load("./assets/inc/player.html");
+
+                         status();
+                    });
+               });
+          </script>
+     </body>
+</html>
